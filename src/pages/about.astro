@@ -1,0 +1,35 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<style>
+  h1 {
+    animation: 2s infinite caseswitch;
+    width: 25rem;
+  }
+  @keyframes caseswitch {
+    25% {
+      text-align: left;
+      text-transform: uppercase;
+    }
+    50% {
+      text-align: center;
+      text-transform: capitalize;
+    }
+    75% {
+      text-align: right;
+      text-transform: lowercase;
+    }
+  }
+</style>
+
+<BaseLayout>
+  <div>
+    <div class="about">
+      <h1>
+        Anti-Professional <br />
+         Professional Scum
+      </h1>
+    </div>
+  </div>
+</BaseLayout>

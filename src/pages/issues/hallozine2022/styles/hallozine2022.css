@@ -1,0 +1,393 @@
+iframe {
+  border: none;
+}
+html {
+  background-color: #282c34;
+  scroll-behavior: smooth;
+  margin: 0%;
+  padding: 0%;
+}
+.hide-scrollbar {
+  /*FireFox*/
+  scrollbar-width: none;
+  /*IE10+*/
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+.hide-scrollbar::-webkit-scrollbar {
+  /*Chrome, Safari, Edge*/
+  display: none;
+}
+.hang {
+  padding-left: 50px;
+  text-indent: -50px;
+  text-align: unset;
+  text-align-last: unset;
+  font-size: medium;
+  word-wrap: normal;
+}
+
+pre {
+  /* white-space: nowrap;  */
+  word-break: keep-all;
+  word-wrap: break-word;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  margin: 0;
+  --maxFontSize: 18px;
+  --minFontSize: 9px;
+  --scaler: 2vw;
+  font-size: clamp(var(--minFontSize), var(--scaler), var(--maxFontSize));
+  overflow-x: auto;
+}
+.jsls {
+  text-align: justify;
+  width: 500px;
+  overflow: visible;
+  font-size: medium;
+  white-space: pre-line !important;
+  padding: 0%;
+}
+.j-s#font-size {
+  font-size: 15px important!;
+}
+.justify {
+  /* display: block; */
+  /* white-space: normal !important; */
+  display: "flex";
+  flex-direction: "column";
+  align-items: center;
+  margin: 10%;
+  margin-top: 0%;
+  text-align: justify !important;
+  /* white-space: pre-line !important; */
+
+  /* text-align: justify !important; */
+  text-justify: inter-character;
+  /* justify-content: center; */
+  overflow: visible;
+  --maxFontSize: 18px;
+  --minFontSize: 9px;
+  --scaler: 2vw;
+  font-size: clamp(var(--minFontSize), var(--scaler), var(--maxFontSize));
+  text-align-last: justify;
+}
+#justify::after {
+  content: "";
+  display: inline-block;
+  width: 100%;
+}
+.justify > i {
+  --maxFontSize: 20px;
+  --minFontSize: 9x !important;
+  --scaler: 2vw;
+  font-size: clamp(var(--minFontSize), var(--scaler), var(--maxFontSize));
+  text-align-last: justify;
+}
+
+.strongi {
+  font-style: italic;
+  font-weight: bold;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.App-header {
+  align-items: center;
+  background-color: #282c34;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: fit-content;
+  overflow-x: auto;
+  z-index: -1;
+}
+.App-header h1 {
+  font-size: calc(10px + 2vmin);
+  animation: bgcolorshift infinite 5s ease-in-out;
+  list-style-position: inside;
+  list-style-type: none;
+  scroll-behavior: smooth;
+  padding: 0%;
+  text-align: center;
+  width: 40vw;
+  padding: 4vh;
+}
+.App-header h2 {
+  font-size: calc(5px + 2vmin);
+}
+
+.App-header > ul {
+  align-items: center;
+  animation: bgcolorshift infinite 5s ease-in-out;
+  list-style-position: inside;
+  list-style-type: none;
+  scroll-behavior: smooth;
+  padding: 0%;
+  text-align: center;
+  width: 40vw;
+}
+.App-header a {
+  text-decoration: none;
+}
+.App-header a:hover {
+  text-decoration: underline;
+  text-decoration-style: wavy;
+  animation: decorationcolorshift infinite 3s ease-in-out;
+}
+.App-header a:visited {
+  color: white;
+}
+li {
+  display: block;
+  margin: 2vmin;
+  text-align: center;
+}
+li > .App-header > .active {
+  animation: bgcolorshift infinite 10s ease-in-out;
+}
+.sample {
+  background-color: white;
+  color: black;
+  margin-left: 10vw;
+  margin-right: 10vw;
+}
+.sample p {
+  --maxFontSize: 20px;
+  --minFontSize: 10px;
+  --scaler: 6vw;
+  font-size: clamp(var(--minFontSize), var(--scaler), var(--maxFontSize));
+  margin-left: 10vw;
+  margin-right: 10vw;
+}
+.about {
+  background-color: white;
+  color: black;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  animation: bgcolorshift infinite 10s ease-in-out;
+  height: 100vh;
+}
+.about p {
+  --maxFontSize: 20px;
+  --minFontSize: 10px;
+  --scaler: 6vw;
+  font-size: clamp(var(--minFontSize), var(--scaler), var(--maxFontSize));
+  margin-left: 10vw;
+  margin-right: 10vw;
+}
+.about h1 {
+  --maxFontSize: 25px;
+  --minFontSize: 10px;
+  --scaler: 6vw;
+  font-size: clamp(var(--minFontSize), var(--scaler), var(--maxFontSize));
+  margin-left: 1vw;
+  margin-right: 1vw;
+  animation: caseswitch infinite 2s;
+}
+.about h2 {
+  --maxFontSize: 20px;
+  --minFontSize: 8px;
+  --scaler: 6vw;
+  font-size: clamp(var(--minFontSize), var(--scaler), var(--maxFontSize));
+  margin-left: 1vw;
+  margin-right: 1vw;
+}
+
+.about img {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hallozinelanding ul li {
+  --maxFontSize: 18px;
+  --minFontSize: 12px;
+  --scaler: 4vw;
+  font-size: clamp(var(--minFontSize), var(--scaler), var(--maxFontSize));
+  font-weight: normal;
+  color: red;
+  background-color: rgba(14, 0, 0, 0.8);
+}
+.hallozinelanding ul li a {
+  color: pink;
+  text-decoration: wavy;
+}
+
+.hallozinelanding {
+  background-color: transparent;
+  color: orangered;
+  width: 80vw;
+  height: 100vh;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.hallozinelanding > ul {
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 1) 3%,
+    rgba(108, 105, 105, 1) 51%,
+    rgba(255, 255, 255, 0.1955307262569832) 100%
+  );
+  background-image: url("https://drive.google.com/uc?export=download&id=1Teyv6_c1dvuPYSFOQhnd9Lh0G0j3GViC");
+  background-size: 250vh;
+  list-style-position: inside;
+  list-style-type: none;
+  padding: 0%;
+  margin: 0%;
+  align-items: flex-end;
+  height: 180vh;
+  width: 80vw;
+  /* clip-path: polygon(0 0, 100% 0%, 100% 90%, 0% 60%); */
+  pointer-events: auto;
+  max-width: 800px;
+}
+
+.hallozinelanding > li {
+  margin: 1.5vmin;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.hallozineoutlet {
+  /* padding-right: 10vw; */
+  margin: 0%;
+  padding: 0%;
+  width: fit-content;
+  align-items: flex-end;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  z-index: 5;
+}
+
+.hallozineoutlet ul {
+  margin-top: 15vh;
+  border: 4px solid red;
+  background-color: #282c34;
+  padding-bottom: 15vh;
+  z-index: 6;
+  align-items: center;
+  white-space: nowrap;
+  list-style-position: inside;
+  list-style-type: none;
+  padding: 0%;
+  text-align: center;
+  margin-left: 20vw;
+  pointer-events: auto;
+  display: flex;
+}
+.hallozineoutlet ul li {
+  width: auto;
+}
+.hallozineimage {
+  position: absolute;
+  z-index: 3;
+  height: 50vh;
+  width: 40vw;
+  padding-top: 50vh;
+  padding-left: 10vw;
+}
+.hallozineimage img {
+  height: 50vh;
+  width: 40vw;
+}
+.hallozineoutlet section {
+  display: inline-block;
+  padding-bottom: 5vh;
+  margin-bottom: 0%;
+  margin-top: -0.5%;
+  height: 100%;
+  width: 90vw;
+  background-color: #282c34;
+  color: red;
+  padding-left: 5vw;
+  padding-right: 5vw;
+  pointer-events: auto;
+  line-height: 1.5;
+  align-self: center;
+  align-items: center;
+  text-align: left;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  --maxFontSize: 18px;
+  --minFontSize: 9px;
+  --scaler: 2vw;
+  font-size: clamp(var(--minFontSize), var(--scaler), var(--maxFontSize));
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+.hallozineoutlet section strong {
+  --maxFontSize: 25px;
+  --minFontSize: 18px;
+  --scaler: 2vw;
+  font-size: clamp(var(--minFontSize), var(--scaler), var(--maxFontSize));
+}
+.hallozineoutlet section i {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  --maxFontSize: 18px;
+  --minFontSize: 9px;
+  --scaler: 2vw;
+  font-size: clamp(var(--minFontSize), var(--scaler), var(--maxFontSize));
+}
+.hallozineoutlet section img {
+  width: 70vw;
+  height: auto;
+  margin-left: 10vw;
+}
+
+.hallozineoutlet .App-header {
+  align-self: center;
+}
+.hallozineoutlet .App-header a {
+  color: inherit;
+}
+
+.hallozinecontent {
+  margin-top: 50vh;
+  width: 20vw;
+  height: auto;
+  margin-left: 10vw;
+  overflow: auto;
+
+  align-items: center;
+  background-color: transparent;
+
+  display: flex;
+  flex-direction: column;
+}
+
+@keyframes bgcolorshift {
+  0%,
+  100% {
+    background-color: black;
+  }
+  25% {
+    background-color: orangered;
+  }
+  50% {
+    background-color: orange;
+  }
+  75% {
+    background-color: red;
+  }
+}
+@keyframes decorationcolorshift {
+  0% {
+    text-decoration-color: black;
+  }
+  25% {
+    text-decoration-color: yellow;
+  }
+  50% {
+    text-decoration-color: orange;
+  }
+  75% {
+    text-decoration-color: red;
+  }
+  100% {
+    text-decoration-color: black;
+  }
+}

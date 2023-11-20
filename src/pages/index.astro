@@ -1,15 +1,136 @@
 ---
+import { Image } from "astro:assets";
+import Droplet from "../../public/svg/black_droplet.svg?url";
+import StoneBaby from "../../public/stonebaby-export.gif";
 ---
 
+<style>
+  @font-face {
+    font-family: "TenorSans";
+    src: url("/fonts/TenorSans-Regular.ttf");
+  }
+  html {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+  }
+  body {
+    background-image: url("../../public/stonebaby-export.gif");
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background-color: aliceblue;
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: 50% 47%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh; /* Adjust as needed */
+  }
+  a {
+    color: unset;
+    text-align: center;
+    mix-blend-mode: unset;
+    font-size: clamp(1rem, 5vw, 2rem);
+  }
+  h1 {
+    font-size: clamp(3rem, 12vw, 8rem);
+    font-family: "TenorSans", sans-serif;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    margin-top: 15px;
+    text-transform: uppercase;
+  }
+  img {
+    align-self: center;
+  }
+  .container {
+    width: fit-content;
+  }
+  .hero-heading-container {
+    background-image: linear-gradient(
+      135deg,
+      rgba(255, 0, 0, 0.438),
+      #2121cc6c,
+      #1e0674b9,
+      rgba(15, 15, 15, 0.194)
+    );
+    background-blend-mode: lighten;
+    height: 100%;
+    width: 100vw;
+  }
+  .hero-heading-container > div {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    margin: auto;
+    max-width: 100rem;
+    padding: 1rem;
+    height: fit-content;
+    mix-blend-mode: screen;
+    -moz-background-clip: text;
+    -webkit-background-clip: text;
+    padding: clamp(2.5rem, 12vw, 30%);
+    background: rgba(50, 205, 50, 0.994);
+    background-image: url("/public/svg/cloacaeye.svg"),
+      url("/public/svg/cloacaeye.svg");
+    background-size: 5rem;
+    background-position:
+      0 0,
+      0 bottom;
+    background-repeat: repeat-x, repeat-x;
+  }
+  .links {
+    width: 10%;
+    word-break: keep-all;
+
+    text-transform: uppercase;
+
+    height: fit-content;
+    margin: auto;
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    grid-template-columns: 1fr 1rem 1fr 1rem 1fr;
+    gap: 1rem;
+  }
+  .links img {
+    height: clamp(6px, 3vw, 20px);
+  }
+</style>
+
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+  {/* styling ^ */}
+
+  <meta charset="utf-8" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.jpg" />
+  <meta name="viewport" content="width=device-width" />
+  <meta name="generator" content={Astro.generator} />
+  <link rel="icon" type="image/svg+xml" href="/favicon.jpg" />
+  <title>Cloaca Mag</title>
+
+  <body>
+    <div class="container">
+      <div class="hero-heading-container">
+        <div>
+          <h1>Cloaca</h1>
+          <nav class="links">
+            <a href="submissions">Submit</a>
+            <img src={Droplet} height="15px" />
+            <a href="about">About</a>
+            <img src={Droplet} height="15px" />
+            <a href="issues" style={{ alignSelf: "right" }}>Issues</a>
+          </nav>
+          <h1>Mag</h1>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
