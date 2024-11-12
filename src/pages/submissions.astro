@@ -1,0 +1,69 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+const status = "open";
+---
+
+<style>
+  h1 {
+    font-size: medium;
+  }
+  main {
+    padding: 1rem;
+    text-align: center;
+    width: fit-content;
+  }
+  .description {
+    text-align: justify;
+    letter-spacing: 0.025rem;
+  }
+  .status {
+    display: inline-block;
+    animation: jumping 2s infinite ease-in-out alternate-reverse;
+  }
+  .open {
+    color: green;
+  }
+  .closed {
+    color: black;
+  }
+
+  @keyframes jumping {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    25% {
+      transform: translateY(-0.5rem);
+    }
+    75% {
+      transform: translateY(0.5rem);
+    }
+  }
+</style>
+<BaseLayout>
+  <p>submissions</p>
+  <h1>
+    Cloaca Mag is currently <span
+      class:list={["status", status === "open" ? "open" : "closed"]}>OPEN</span
+    > for submissions:
+  </h1>
+  <main>
+    <section class="description">
+      <p class="description">
+        We're looking for work for regular releases. It turns out releasing an
+        issue on a hard deadline, especially for a first release, is, uh,
+        difficult. We're going to group 3-5 authors together per release, and
+        the release date will be announced when we have it all figured out.
+      </p>
+      <p class="description">
+        We are passionate about supporting the people who publish with us and we
+        regularly submit author
+      </p>
+    </section>
+
+    <section>
+      Send your words/images/videos/games/comics to :
+      <address>cloacamag@gmail.com</address>
+    </section>
+  </main>
+</BaseLayout>

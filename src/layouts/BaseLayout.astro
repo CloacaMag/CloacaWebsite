@@ -1,0 +1,94 @@
+---
+import Droplet from "../../public/svg/black_droplet.svg?url";
+import Logo from "/svg/cloacaeye.svg?url";
+const { hasFooter = true, darkBG = false } = Astro.props;
+---
+
+<style>
+  body {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+  }
+  .links a {
+    pointer-events: auto;
+    color: unset;
+    text-align: center;
+    font-size: clamp(6px, 10vw, 20px);
+  }
+  .darkFonts {
+    color: black;
+  }
+  .lightFonts {
+    color: white;
+  }
+  .logo {
+    height: clamp(50px, 3vw, 80px);
+  }
+  .lightLogo {
+    filter: invert(100%);
+  }
+  .flippedXY {
+    transform: scaleY(-1) scaleX(-1);
+  }
+
+  nav {
+    width: fit-content;
+    text-transform: uppercase;
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    grid-template-columns: 1fr 1rem 1fr 1rem 1fr;
+    gap: 1rem;
+  }
+
+  footer {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+  }
+  .links img {
+    mix-blend-mode: difference;
+    margin: auto;
+    height: clamp(6px, 3vw, 20px);
+  }
+</style>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.jpg" />
+    <title>Cloaca Mag</title>
+  </head>
+  <body>
+    <img class:list={["logo", darkBG && "lightLogo"]} src={Logo} />
+    <nav class:list={["links", darkBG ? "lightFonts" : "darkFonts"]}>
+      <a href="/submissions">Submit</a>
+      <img src={Droplet} height="15px" />
+      <a href="/about">About</a>
+      <img src={Droplet} height="15px" />
+      <a href="/issues" style={{ alignSelf: "right" }}>Issues</a>
+    </nav>
+    <slot />
+    {
+      hasFooter && (
+        <footer>
+          <a
+            class:list={["links", darkBG ? "lightFonts" : "darkFonts"]}
+            href="/"
+          >
+            Cloaca Mag
+          </a>
+          <img
+            src={Logo}
+            class:list={["logo", "flippedXY", darkBG && "lightLogo"]}
+          />
+        </footer>
+      )
+    }
+  </body>
+</html>

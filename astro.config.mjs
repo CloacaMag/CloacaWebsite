@@ -1,6 +1,13 @@
 import { defineConfig } from 'astro/config';
+import { astroImageTools } from "astro-imagetools";
 
 // https://astro.build/config
 export default defineConfig({
+    integrations: [astroImageTools],
+    server: {
+        host: true
+    },
+    redirects:{
+    },
     site: 'https://www.cloacamag.com'
 });

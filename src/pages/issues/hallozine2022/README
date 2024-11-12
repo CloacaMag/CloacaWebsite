@@ -1,0 +1,8 @@
+Don't style the way that this issue has been styled.
+I did it this way because I didn't know any better and I was learning React.
+
+Now that this is an astro project, instead create a Layout - look for in the src/layouts folder - for the issue, or use one that has already been made. That way you don't have to keep importing the favicon or set up the navigation bar. Keep as much styling as possible to the individual pieces in a style tag.
+
+WL
+
+- 2023
