@@ -8,5 +8,6 @@ export default defineConfig({
         host: true
     },
     redirects:{
-    }
+    },
+    site: 'https://www.cloacamag.com'
 });
